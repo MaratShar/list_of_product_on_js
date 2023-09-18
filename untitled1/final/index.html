@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список покупок</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container mb-5">
+		<h2 class="mb-2 mt-3">Добавление продукта</h2>
+		<form class="row align-items-center">
+			<div class="mb-3 col">
+				<label for="product-input" class="form-label">Товар</label>
+				<select id="product-input" class="form-control">
+					<option>
+						Помидоры 1кг
+					</option>
+					<option>
+						Помидоры 1кг
+					</option>
+					<option>
+						Помидоры 1кг
+					</option>
+				</select>
+			</div>
+			<div class="mb-3 col">
+				<label for="product-count-input" class="form-label">Кол-во</label>
+				<input type="text" class="form-control" id="product-count-input">
+			</div>
+			<div class="mb-3 col">
+				<label for="price-input" class="form-label">Цена</label>
+				<input type="text" value="0" disabled class="form-control" id="price-input">
+			</div>
+			<div class="mb-3 col align-self-end">
+				<button type="button" class="btn btn-primary" onclick="addToCheckList(event)">Добавить</button>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<div class="justify-content-between row mb-2">
+			<div class="col">
+				<h2>Список покупок:</h2>
+			</div>
+			<div class="col">
+				<h4 style="text-align: end">Сумма: <span id="full-price-label">0</span></h4>
+			</div>
+		</div>
+		<table class="table">
+			<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Артикул</th>
+				<th scope="col">Название</th>
+				<th scope="col">Кол-во</th>
+				<th scope="col">Цена</th>
+				<th scope="col">Управление</th>
+			</tr>
+			</thead>
+			<tbody id="check-list">
+<!--			<tr>-->
+<!--				<th scope="row">1</th>-->
+<!--				<td>Mark</td>-->
+<!--				<td>Otto</td>-->
+<!--				<td>@mdo</td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<th scope="row">2</th>-->
+<!--				<td>Jacob</td>-->
+<!--				<td>Thornton</td>-->
+<!--				<td>@fat</td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<th scope="row">3</th>-->
+<!--				<td colspan="2">Larry the Bird</td>-->
+<!--				<td>@twitter</td>-->
+<!--			</tr>-->
+			</tbody>
+		</table>
+	</div>
+	<script src="js/product-list.js"></script>
+	<script src="js/check-list.js"></script>
+	<script src="js/form.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
